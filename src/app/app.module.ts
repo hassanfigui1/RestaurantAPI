@@ -9,6 +9,7 @@ import { SectionComponent } from './section/section.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainSectionComponent } from './main-section/main-section.component';
 import { AddSectionComponent } from './add-section/add-section.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddSectionComponent } from './add-section/add-section.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
