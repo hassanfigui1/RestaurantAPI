@@ -7,13 +7,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { SectionComponent } from './section/section.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { MainSectionComponent } from './main-section/main-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SectionComponent,
-    SidebarComponent
+    SidebarComponent,
+    MainSectionComponent
   ],
   imports: [
     BrowserModule,
