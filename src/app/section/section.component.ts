@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedMenuListService } from '../shared-menu-list.service';
 
 @Component({
   selector: 'app-section',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./section.component.css']
 })
 export class SectionComponent {
-
+  constructor(public _shareListMenu: SharedMenuListService){}
+  list_of_menus = this._shareListMenu.list_of_menus;
 }
