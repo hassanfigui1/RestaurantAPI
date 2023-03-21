@@ -1,1 +1,7 @@
-<p>section works!</p>
+<section>
+    <ng-container *ngFor="let menu of list_of_menus">
+        <div class="row">
+            <div class="col-3">{{menu.title}}</div>
+        </div>
+    </ng-container>
+</section>
