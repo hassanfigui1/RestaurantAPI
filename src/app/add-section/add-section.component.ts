@@ -18,13 +18,24 @@ export class AddSectionComponent {
 
 
   addMenu(){
-    this._sharedList_menus.list_of_menus.push(this.menu); 
-    console.log(this._sharedList_menus);
-    this.menu ={
-      title:'',
-      inventory_code:0,
-      menu_price:0
-    }
+    this._sharedList_menus.createMenu(this.menu)
+        .subscribe(
+            res=>{
+              this.menu ={
+                title:'',
+                inventory_code:0,
+                menu_price:0
+              }
+            },
+            err=>{
+              alert("error");
+            }
+        );
+    // this.menu ={
+    //   title:'',
+    //   inventory_code:0,
+    //   menu_price:0
+    // }
     
   }
 
