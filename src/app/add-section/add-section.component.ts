@@ -14,8 +14,6 @@ export class AddSectionComponent {
     inventory_code:0,
     menu_price:0
   }
-  
-
 
   addMenu(){
     this._sharedList_menus.createMenu(this.menu)
@@ -28,7 +26,7 @@ export class AddSectionComponent {
               }
             },
             err=>{
-              alert("error");
+              alert("error"+err);
             }
         );
     // this.menu ={

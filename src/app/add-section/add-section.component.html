@@ -2,13 +2,13 @@
     <h1>Add Menu {{menu.title}}</h1>
     <form action="" class="form">
         <div class="col-3">
-            <input type="text" required [(ngModel)]="menu.title" minlength="3" class="form-control" placeholder="menu_title" name="menu_title" id="">
+            <input type="text" required [(ngModel)]="menu.title" minlength="3" class="form-control" placeholder="menu title" name="title" id="">
         </div>
         <div class="col-3">
-            <input type="number" required [(ngModel)]="menu.menu_price" placeholder="menu price" class="form-control" name="menu_price" id=""> 
+            <input type="number" required [(ngModel)]="menu.menu_price" placeholder="menu price" class="form-control" name="price" id=""> 
         </div>
         <div class="col-3 ">
-            <input type="number" required [(ngModel)]="menu.inventory_code" placeholder="menu inventory number" class="form-control" name="menu_inventory" id="">
+            <input type="number" required [(ngModel)]="menu.inventory_code" placeholder="menu inventory number" class="form-control" name="inventory" id="">
         </div>
         <div class="col-3">
             <button type="submit" class="btn btn-control bg-dark text-white" (click)="addMenu()">Add Menu</button>
