@@ -8,10 +8,13 @@ export class SharedMenuListService {
   list_of_menus: any[] = [];
 
   constructor(private http: HttpClient) { }
-  private url = 'http://127.0.0.1:8000/';
 
   createMenu(menu : any){
-    return this.http.post(this.url + 'api/menu-items', this.list_of_menus);
+    alert("called");
+    return this.http.post("http://127.0.0.1:8000/api/menu-item", this.list_of_menus);
+  }
+  getMenu(){
+    return this.http.get("http://127.0.0.1:8000/api/menu-items");
   }
 
 }

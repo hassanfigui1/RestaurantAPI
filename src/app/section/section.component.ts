@@ -8,5 +8,20 @@ import { SharedMenuListService } from '../shared-menu-list.service';
 })
 export class SectionComponent {
   constructor(public _shareListMenu: SharedMenuListService){}
-  list_of_menus = this._shareListMenu.list_of_menus;
+  list_of_menus : any[] = [];
+ 
+  getMenus(){
+    this._shareListMenu.getMenu().subscribe(
+      data =>{
+        console.log(data);
+      }
+    )
+  }
+
+
+
+
+
+
+
 }

@@ -11,8 +11,8 @@ export class AddSectionComponent {
   constructor(public _sharedList_menus: SharedMenuListService){}
   menu ={
     title:'',
-    inventory_code:0,
-    menu_price:0
+    inventory:0,
+    price:0
   }
 
   addMenu(){
@@ -21,8 +21,8 @@ export class AddSectionComponent {
             res=>{
               this.menu ={
                 title:'',
-                inventory_code:0,
-                menu_price:0
+                inventory:0,
+                price:0
               }
             },
             err=>{
