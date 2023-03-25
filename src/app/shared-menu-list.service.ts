@@ -19,6 +19,9 @@ export class SharedMenuListService {
   deleteMenu(id:any){
     return this.http.delete(this.url+"api/menu-items/"+id)
   }
+  getMenuItemById(id:any){
+    return this.http.get(this.url = 'menu-items/'+id)
+  }
 
 
 }

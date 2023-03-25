@@ -17,8 +17,9 @@ export class UpdateMenuComponent {
 
   ngOnInit():void{
     this.id = this.act.snapshot.paramMap.get('id');
-  
   }
+
+  
   
 
 }
