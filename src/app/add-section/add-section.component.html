@@ -4,10 +4,10 @@
             <input type="text" required [(ngModel)]="menu.title" minlength="3" class="form-control" placeholder="menu title" name="title" id="">
         </div>
         <div class="col-3">
-            <input type="number" required placeholder="menu price" class="form-control" name="price" id=""> 
+            <input type="number" required  [(ngModel)]="menu.price" placeholder="menu price" class="form-control" name="price" id=""> 
         </div>
         <div class="col-3 ">
-            <input type="number" required  placeholder="menu inventory number" class="form-control" name="inventory" id="">
+            <input type="number" required    [(ngModel)]="menu.inventory" placeholder="menu inventory number" class="form-control" name="inventory" id="">
         </div>
         <div class="col-3">
             <button type="submit" class="btn btn-control bg-dark text-white" (click)="addMenu()">Add Menu</button>

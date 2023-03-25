@@ -8,12 +8,17 @@ import { SharedMenuListService } from '../shared-menu-list.service';
 })
 export class SectionComponent {
   constructor(public _shareListMenu: SharedMenuListService){}
-  list_of_menus : any[] = [];
+  list_of_menus : any;
  
-  getMenus(){
+
+  ngOnInit(): void{
     this._shareListMenu.getMenu().subscribe(
-      data =>{
-        console.log(data);
+      res=>{
+        console.log(res);
+        this.list_of_menus = res;
+      },
+      err=>{
+        console.log(err);
       }
     )
   }

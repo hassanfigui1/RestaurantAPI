@@ -26,6 +26,7 @@ export class AddSectionComponent {
               }
             },
             err=>{
+              console.log(this.menu);
               alert("error"+err);
             }
         );
