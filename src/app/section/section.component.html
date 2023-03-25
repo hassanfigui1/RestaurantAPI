@@ -1,7 +1,11 @@
 <section>
-    <ng-container *ngFor="let menu of list_of_menus ">
-        <div class="row">
-            <div class="col-3">{{menu.title}}</div>
-        </div>
-    </ng-container>
+    <div class="row">
+        <ng-container *ngFor="let menu of list_of_menus ">
+            <div class="col-3">
+                <p>{{menu.title}}</p>
+                <p>{{menu.price}}</p>
+            </div>
+        </ng-container>
+    </div>
+
 </section>

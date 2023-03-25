@@ -11,7 +11,7 @@ export class SharedMenuListService {
 
   createMenu(menu : any){
     alert("createmenu");
-    return this.http.post("http://127.0.0.1:8000/api/menu-items", this.list_of_menus);
+    return this.http.post("http://127.0.0.1:8000/api/menu-items", menu);
   }
   getMenu(){
     return this.http.get("http://127.0.0.1:8000/api/menu-items");

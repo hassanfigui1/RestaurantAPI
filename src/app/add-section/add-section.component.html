@@ -1,5 +1,6 @@
 <section class="row">
     <h1>Add Menu {{menu.title}}</h1>
+    <form action=""  method="post" class="form-control">
         <div class="col-3">
             <input type="text" required [(ngModel)]="menu.title" minlength="3" class="form-control" placeholder="menu title" name="title" id="">
         </div>
@@ -10,7 +11,8 @@
             <input type="number" required    [(ngModel)]="menu.inventory" placeholder="menu inventory number" class="form-control" name="inventory" id="">
         </div>
         <div class="col-3">
-            <button type="submit" class="btn btn-control bg-dark text-white" (click)="addMenu()">Add Menu</button>
+            <button class="btn btn-control bg-dark text-white" (click)="addMenu()">Add Menu</button>
         </div>    
+    </form>
 </section>
 
