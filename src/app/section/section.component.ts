@@ -22,6 +22,16 @@ export class SectionComponent {
       }
     )
   }
+  deleteMenu(id:any){
+    this._shareListMenu.deleteMenu(id).subscribe(
+      res=>{
+        this.ngOnInit();
+      },
+      err=>{
+        console.log("error"+err);
+      }
+    )
+  }
 
 
 

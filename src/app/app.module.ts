@@ -10,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainSectionComponent } from './main-section/main-section.component';
 import { AddSectionComponent } from './add-section/add-section.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateMenuComponent } from './update-menu/update-menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     SectionComponent,
     SidebarComponent,
     MainSectionComponent,
-    AddSectionComponent
+    AddSectionComponent,
+    UpdateMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 <section class="ms-5"> 
-    <div>
+    <div hidden>
         <form action=""  method="post" class="col-4 ms-5 mt-3" >
             <div class="row">
                 <input type="text" required minlength="3" class="form-control" placeholder="menu title" name="title" id="">
@@ -20,7 +20,8 @@
             <div class="col-4">
                 <h5 class="card-title">{{menu.title}}</h5>
                 <p>{{menu.price}}</p>
-                <a routerLink="modify-menu" class="btn btn-success">Modify</a>
+                <button class="btn btn-success">Modify</button>
+                <button (click)="deleteMenu(menu.id)" class="btn btn-danger">Remove</button>
             </div>
         </ng-container>
     </div>
