@@ -1,26 +1,10 @@
 <section class="ms-5"> 
-    <div hidden>
-        <form action=""  method="post" class="col-4 ms-5 mt-3" >
-            <div class="row">
-                <input type="text" required minlength="3" class="form-control" placeholder="menu title" name="title" id="">
-            </div>
-            <div class="row">
-                <input type="number" required   placeholder="menu price" class="form-control" name="price" id=""> 
-            </div>
-            <div class="row ">
-                <input type="number" required     placeholder="menu inventory number" class="form-control" name="inventory" id="">
-            </div>
-            <div class="row">
-                <button class="btn btn-control bg-dark text-white" >Add Menu</button>
-            </div>    
-        </form>
-    </div>
     <div class="row mt-5">
         <ng-container *ngFor="let menu of list_of_menus ">
             <div class="col-4">
                 <h5 class="card-title">{{menu.title}}</h5>
                 <p>{{menu.price}}</p>
-                <button class="btn btn-success">Modify</button>
+                <button class="btn btn-info" [routerLink]="['/update-menu',menu.id]">Modify</button>
                 <button (click)="deleteMenu(menu.id)" class="btn btn-danger">Remove</button>
             </div>
         </ng-container>
