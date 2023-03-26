@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SharedMenuListService } from '../shared-menu-list.service';
 
 @Component({
   selector: 'app-update-menu',
@@ -11,12 +12,29 @@ export class UpdateMenuComponent {
   menu_items : any;
   id: any;
 
-  constructor(private act: ActivatedRoute){}
+  constructor(private act: ActivatedRoute, private _sharedService :SharedMenuListService ){}
 
-  updateMenuItem(){}
+  updateMenuItem(){
+    this._sharedService.updateMenuItem(this.id,this.menu_items).subscribe(
+      res=>{
+        console.log("hello");
+      },
+      err=>{
+        console.log("error :"+err);
+      }
+    )
+  }
 
   ngOnInit():void{
     this.id = this.act.snapshot.paramMap.get('id');
+    this._sharedService.getMenuItemById(this.id).subscribe(
+      res=>{
+        this.menu_items = res;
+      },
+      err=>{
+        console.log(err);
+      }
+    )
   }
 
   
