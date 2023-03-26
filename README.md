@@ -1,6 +1,8 @@
 # RestaurantAPI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+# Before Runing this project, run the django_rest_framework project [Restaurant_LittleLemon_API]
+https://github.com/hassanfigui1/Restaurant_LittleLemon_API
 
 ## Development server
 
