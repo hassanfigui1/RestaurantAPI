@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { SharedMenuListService } from '../shared-menu-list.service';
 
 @Component({
@@ -12,12 +12,12 @@ export class UpdateMenuComponent {
   menu_items : any;
   id: any;
 
-  constructor(private act: ActivatedRoute, private _sharedService :SharedMenuListService ){}
+  constructor(private act: ActivatedRoute, private _sharedService :SharedMenuListService, private router:Router){}
 
   updateMenuItem(){
     this._sharedService.updateMenuItem(this.id,this.menu_items).subscribe(
       res=>{
-        console.log(res);
+        this.router.navigate(['/menu-items'])
       },
       err=>{
         console.log(err);

@@ -11,7 +11,7 @@
             <input type="number" required [(ngModel)]="menu_items.inventory" class="form-control" name="inventory" id="">
         </div>
         <div class="row">
-            <button class="btn btn-control bg-dark text-white" >Add Menu</button>
+            <button class="btn btn-control bg-dark text-white" (click)="updateMenuItem()" >Modify</button>
         </div>    
     </form>
 </div>
