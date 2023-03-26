@@ -22,6 +22,9 @@ export class SharedMenuListService {
   getMenuItemById(id:any){
     return this.http.get(this.url = 'menu-items/'+id)
   }
+  updateMenuItem(id:any, menu:any){
+    return this.http.put(this.url+"menu-items/"+id,menu);
+  }
 
 
 }
