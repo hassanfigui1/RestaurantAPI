@@ -2,13 +2,13 @@
 <div>
     <form action=""  method="post" class="col-4 ms-5 mt-3" >
         <div class="row">
-            <input type="text" ngModel="" [(ngModel)]="menu_items.title"  required minlength="3" class="form-control" placeholder="menu title" name="title" id="">
+            <input type="text" [(ngModel)]="menu_items.title"  required minlength="3" class="form-control"  name="title" id="">
         </div>
         <div class="row">
-            <input type="number" required [(ngModel)]="menu_items.price" placeholder="menu price" class="form-control" name="price" id=""> 
+            <input type="number" required [(ngModel)]="menu_items.price" class="form-control" name="price" id=""> 
         </div>
         <div class="row ">
-            <input type="number" required [(ngModel)]="menu_items.inventory" placeholder="menu inventory number" class="form-control" name="inventory" id="">
+            <input type="number" required [(ngModel)]="menu_items.inventory" class="form-control" name="inventory" id="">
         </div>
         <div class="row">
             <button class="btn btn-control bg-dark text-white" >Add Menu</button>

@@ -20,10 +20,10 @@ export class SharedMenuListService {
     return this.http.delete(this.url+"api/menu-items/"+id)
   }
   getMenuItemById(id:any){
-    return this.http.get(this.url = 'menu-items/'+id)
+    return this.http.get(this.url + 'api/menu-items/'+id)
   }
   updateMenuItem(id:any, menu:any){
-    return this.http.put(this.url+"menu-items/"+id,menu);
+    return this.http.put(this.url+"api/menu-items/"+id,menu);
   }
 
 

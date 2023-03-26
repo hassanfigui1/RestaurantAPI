@@ -17,10 +17,10 @@ export class UpdateMenuComponent {
   updateMenuItem(){
     this._sharedService.updateMenuItem(this.id,this.menu_items).subscribe(
       res=>{
-        console.log("hello");
+        console.log(res);
       },
       err=>{
-        console.log("error :"+err);
+        console.log(err);
       }
     )
   }
@@ -32,7 +32,7 @@ export class UpdateMenuComponent {
         this.menu_items = res;
       },
       err=>{
-        console.log(err);
+        console.log("error :"+err);
       }
     )
   }
